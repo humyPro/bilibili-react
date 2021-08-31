@@ -13,6 +13,11 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint'],
+  settings: {
+    'import/resolver': {
+      typescript: {}
+    }
+  },
   rules: {
     semi: ['error', 'never'],
     'comma-dangle': ['error', 'never'],
@@ -43,6 +48,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
       }
     ],
+    'object-curly-newline': ['off'],
     'react/jsx-one-expression-per-line': ['off'],
     'no-use-before-define': ['off'],
     'import/extensions': [
