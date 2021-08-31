@@ -26,6 +26,7 @@
     "prettier-only-need-commit": "git diff HEAD --name-only --cached | xargs -I file sh -c 'npx prettier --write file; git add file'"
   },
   "pre-commit": [
+    "prettier-only-need-commit"
   ],
   "eslintConfig": {
     "extends": [
