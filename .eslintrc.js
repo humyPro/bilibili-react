@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'airbnb'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -59,6 +59,7 @@ module.exports = {
         ts: 'never',
         tsx: 'never'
       }
-    ]
+    ],
+    'react/require-default-props': ['off']
   }
 }
