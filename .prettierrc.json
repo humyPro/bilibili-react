@@ -3,5 +3,6 @@
   "semi": false,
   "trailingComma": "none",
   "endOfLine": "lf",
-  "printWidth": 100
+  "printWidth": 100,
+  "arrowParens": "avoid"
 }

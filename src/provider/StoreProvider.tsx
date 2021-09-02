@@ -1,7 +1,6 @@
 import React, { createContext, FC, useContext } from 'react'
 
 import store from '../stroe'
-import AppStore from '../stroe/AppStore'
 
 type storeType = typeof store
 
