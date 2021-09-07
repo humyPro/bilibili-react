@@ -1,4 +1,3 @@
-import App from '../App'
 import HomePage from '../page/HomePage'
 
 const routeConfig = [
