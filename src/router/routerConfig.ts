@@ -4,6 +4,7 @@ import Login from '../page/login'
 const routeConfig = [
   {
     path: '/',
+    exact: true,
     component: HomePage,
     indexRoute: { component: HomePage },
     childRoutes: []
