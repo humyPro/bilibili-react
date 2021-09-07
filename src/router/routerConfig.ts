@@ -1,4 +1,5 @@
 import HomePage from '../page/HomePage'
+import Login from '../page/login'
 
 const routeConfig = [
   {
@@ -6,6 +7,10 @@ const routeConfig = [
     component: HomePage,
     indexRoute: { component: HomePage },
     childRoutes: []
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ]
 

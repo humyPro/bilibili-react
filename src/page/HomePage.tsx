@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { observer } from 'mobx-react'
 import { useStore } from '../provider'
+import { Link } from 'react-router-dom'
 
 const list: Function[] = []
 const HomePage = () => {
@@ -19,27 +20,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div
-        onClick={() => {
-          appStore.setAppName(`${appStore.appName},`)
-        }}
-      >
-        {appStore.appName}
-      </div>
-      <div
-        onClick={() => {
-          appStore.testFlow()
-          appStore.testAsync()
-        }}
-      >
-        {name}
-      </div>
-      {appStore.data.map(v => (
-        <div key={v}>{v}</div>
-      ))}
-      {appStore.asyncData.map(v => (
-        <div key={v}>{v}</div>
-      ))}
+      <Link to="/login">登录</Link>
     </div>
   )
 }
