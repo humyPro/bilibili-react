@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export type FromInputProps = {
   initValue?: string
-  fieldName: String
+  fieldName: string
   maxlength?: number
   placeholder?: string
   onchange: (value: string) => void

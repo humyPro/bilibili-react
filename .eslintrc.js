@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'airbnb'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'airbnb',
+    'plugin:@typescript-eslint/recommended'
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -64,6 +69,7 @@ module.exports = {
 
     // jsx-a11y/no-static-element-interactions
     'jsx-a11y/no-static-element-interactions': ['off'],
-    'jsx-a11y/click-events-have-key-events': ['off']
+    'jsx-a11y/click-events-have-key-events': ['off'],
+    '@typescript-eslint/no-empty-function': ['off']
   }
 }
