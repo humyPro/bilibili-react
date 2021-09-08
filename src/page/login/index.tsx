@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <div className="page-login">
       <div className="header">
-        <span>密码登录{process.env.REACT_APP_HOST}</span>
+        <span>密码登录</span>
       </div>
       <div className="banner" />
       <div className="login-form">
