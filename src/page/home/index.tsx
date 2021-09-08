@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { observer } from 'mobx-react'
-import { useStore } from '../provider'
+import { useStore } from '../../provider'
 import { Link } from 'react-router-dom'
 
 const list: Function[] = []
-const HomePage = () => {
+const Index = () => {
   debugger
   const appStore = useStore('appStore')
   const [name, setName] = useState<string>(() => 'aa')
@@ -25,4 +25,4 @@ const HomePage = () => {
   )
 }
 
-export default observer(HomePage)
+export default observer(Index)

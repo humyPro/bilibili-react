@@ -1,12 +1,12 @@
-import HomePage from '../page/HomePage'
+import Home from '../page/home'
 import Login from '../page/login'
 
 const routeConfig = [
   {
     path: '/',
     exact: true,
-    component: HomePage,
-    indexRoute: { component: HomePage },
+    component: Home,
+    indexRoute: { component: Home },
     childRoutes: []
   },
   {
