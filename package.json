@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier-all": "npx prettier --write ./",
-    "prettier-only-need-commit": "git diff HEAD --name-only --cached --diff-filter=d| grep -e \"^.*\\.\\(md\\|json\\|js\\|jsx\\|ts\\|tsx\\|css\\|scss\\)$\"  | xargs -I file sh -c 'npx prettier --write --ignore-unknown file; git add file'"
+    "prettier-only-need-commit": "git diff HEAD --name-only --cached --diff-filter=d | grep -e \"^.*\\.\\(md\\|json\\|js\\|jsx\\|ts\\|tsx\\|css\\|scss\\)$\"  | xargs -I file sh -c 'npx prettier --write --ignore-unknown file; git add file'"
   },
   "pre-commit": [
     "prettier-only-need-commit"
