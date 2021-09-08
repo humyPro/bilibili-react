@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './App.scss'
 import { StoreProvider } from './provider'
 import Router from './router'
 

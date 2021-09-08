@@ -20,6 +20,7 @@ const Index = () => {
 
   return (
     <div>
+      <h4>{appStore.appName}</h4>
       <Link to="/login">登录</Link>
     </div>
   )
