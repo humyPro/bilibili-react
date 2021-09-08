@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import FormInput from './FormInput'
-import { url } from 'inspector'
+import BlButton from '../../compoment/blButton'
 
 const Login = () => {
   const [account, setAccount] = useState('')
   const [password, setPassword] = useState('')
+
+  const login = (ac: string, pw: string) => {}
 
   return (
     <div className="page-login">
@@ -26,6 +28,7 @@ const Login = () => {
             setPassword(value)
           }}
         />
+        <BlButton text="登录" onclick={() => {}} />
       </div>
       <div className="notify" />
     </div>
