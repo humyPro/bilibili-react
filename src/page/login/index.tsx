@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import FormInput from './FormInput'
-import BlButton from '../../compoment/blButton'
+import BlButton from '../../compoment/BlButton'
 
 const Login = () => {
   const [account, setAccount] = useState('')
@@ -17,6 +17,7 @@ const Login = () => {
       <div className="login-form">
         <FormInput
           fieldName="账号"
+          placeholder="请输入账号"
           onchange={value => {
             setAccount(value)
           }}
@@ -24,12 +25,17 @@ const Login = () => {
         <FormInput
           fieldName="密码"
           type="password"
+          placeholder="请输入密码"
           onchange={value => {
             setPassword(value)
           }}
         />
+      </div>
+      <div className="button-container">
+        <BlButton text="注册" type="secondary" onclick={() => {}} />
         <BlButton text="登录" onclick={() => {}} />
       </div>
+
       <div className="notify" />
     </div>
   )

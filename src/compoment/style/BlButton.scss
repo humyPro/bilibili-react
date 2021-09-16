@@ -1,0 +1,16 @@
+.bl-button {
+  padding: 1rem;
+  flex-grow: 1;
+  text-align: center;
+
+  &.primary {
+    background-color: var(--color-promary);
+    color: white;
+  }
+
+  &.secondary {
+    background-color: unset;
+    color: var(--color-promary);
+    border: 0.1rem solid var(--color-promary);
+  }
+}

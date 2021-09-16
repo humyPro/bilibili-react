@@ -1,3 +1,5 @@
+@import 'variable';
+@import '../compoment/style';
 @import 'login';
 
 * {
@@ -16,6 +18,11 @@ textarea {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+input,
+textarea::placeholder {
+  font-size: 1.6rem;
 }
 
 .text {

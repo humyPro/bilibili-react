@@ -1,9 +1,19 @@
 type methodType = 'get' | 'post' | 'put' | 'delete'
 
-const api = <T>(url: string, method: methodType, timeout?: number): Promise<T> => {
+const request = <T>(
+  url: string,
+  method: methodType = 'get',
+  query?: Record<string, unknown>,
+  body?: Record<string, unknown>,
+  timeout?: number
+): Promise<T> => {
   const init: RequestInit = {
     credentials: 'same-origin',
-    method
+    method,
+    headers: {
+      'content-type': 'application/json'
+    },
+    mode: 'cors'
   }
   if (timeout !== undefined) {
     let abort: (() => void) | null = null
@@ -25,5 +35,7 @@ const api = <T>(url: string, method: methodType, timeout?: number): Promise<T> =
   }
   return fetch(url, init).then(response => response.json() as Promise<T>)
 }
+const get = (url: string, query: Record<string, unknown>, timeout?: number) =>
+  request(url, 'get', query, undefined, timeout)
 
-export default api
+export default request

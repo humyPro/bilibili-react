@@ -1,9 +1,9 @@
 import { observable } from 'mobx'
 
 class AuthStore {
-  @observable name: string = '123123'
+  @observable name = '123123'
 
-  @observable password: string = ''
+  @observable password = ''
 }
 
 export default AuthStore

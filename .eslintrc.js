@@ -45,6 +45,7 @@ module.exports = {
     'no-return-assign': ['off'],
     'no-tabs': ['off'],
     'no-console': ['off'],
+    'implicit-arrow-linebreak': ['off'],
     radix: ['off'],
     'import/no-unresolved': ['warn'],
     'arrow-parens': ['off'],
@@ -70,6 +71,7 @@ module.exports = {
     // jsx-a11y/no-static-element-interactions
     'jsx-a11y/no-static-element-interactions': ['off'],
     'jsx-a11y/click-events-have-key-events': ['off'],
-    '@typescript-eslint/no-empty-function': ['off']
+    '@typescript-eslint/no-empty-function': ['off'],
+    '@typescript-eslint/explicit-module-boundary-types': ['off']
   }
 }
