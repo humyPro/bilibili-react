@@ -1,20 +1,37 @@
 type methodType = 'get' | 'post' | 'put' | 'delete'
 
-const request = <T>(
+function request<T>(
   url: string,
   method: methodType = 'get',
   query?: Record<string, unknown>,
   body?: Record<string, unknown>,
   timeout?: number
-): Promise<T> => {
+): Promise<T> {
   const init: RequestInit = {
     credentials: 'same-origin',
     method,
     headers: {
       'content-type': 'application/json'
     },
+    body: body && JSON.stringify(body),
     mode: 'cors'
   }
+
+  if (query) {
+    const params: string[] = []
+    Object.keys(query).forEach(k => {
+      const value = query[k]
+      if (value instanceof Array || value instanceof Set) {
+        Array.from(value).forEach(o => {
+          params.push(`k=${o}`)
+        })
+      } else {
+        params.push(`k=${value}`)
+      }
+    })
+    url += `?${params.join('&')}`
+  }
+
   if (timeout !== undefined) {
     let abort: (() => void) | null = null
     const abortPromise = new Promise((resolve, reject) => {
@@ -35,7 +52,17 @@ const request = <T>(
   }
   return fetch(url, init).then(response => response.json() as Promise<T>)
 }
-const get = (url: string, query: Record<string, unknown>, timeout?: number) =>
-  request(url, 'get', query, undefined, timeout)
 
-export default request
+function get<T>(url: string, query: Record<string, unknown>, timeout?: number): Promise<T> {
+  return request<T>(url, 'get', query, undefined, timeout)
+}
+
+function post<T>(url: string, body: Record<string, unknown>, timeout?: number): Promise<T> {
+  return request<T>(url, 'post', undefined, body, timeout)
+}
+
+export default {
+  request,
+  get,
+  post
+}
