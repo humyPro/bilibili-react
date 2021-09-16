@@ -33,7 +33,7 @@ const Login = () => {
       </div>
       <div className="button-container">
         <BlButton text="注册" type="secondary" onclick={() => {}} />
-        <BlButton text="登录" onclick={() => {}} />
+        <BlButton text="登录" disable={!account || !password} onclick={() => {}} />
       </div>
 
       <div className="notify" />

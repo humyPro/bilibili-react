@@ -14,4 +14,8 @@
     color: var(--color-promary);
     border: 0.1rem solid var(--color-promary);
   }
+
+  &.disabled {
+    opacity: 0.5;
+  }
 }
