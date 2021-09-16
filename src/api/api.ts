@@ -53,7 +53,7 @@ function request<T>(
   return fetch(url, init).then(response => response.json() as Promise<T>)
 }
 
-function get<T>(url: string, query: Record<string, unknown>, timeout?: number): Promise<T> {
+function get<T>(url: string, query?: Record<string, unknown>, timeout?: number): Promise<T> {
   return request<T>(url, 'get', query, undefined, timeout)
 }
 

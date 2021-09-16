@@ -1,3 +1,3 @@
-import get from './config'
+import login from './login'
 
-export default { get }
+export default { login }
