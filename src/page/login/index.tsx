@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import FormInput from './FormInput'
 import BlButton from '../../compoment/BlButton'
+import { login } from '../../api'
 
 const Login = () => {
   const [account, setAccount] = useState('')
   const [password, setPassword] = useState('')
 
-  const login = (ac: string, pw: string) => {}
+  const doLogin = () => {
+    login.getSaltKey().then(res => {})
+  }
 
   return (
     <div className="page-login">
@@ -33,7 +36,7 @@ const Login = () => {
       </div>
       <div className="button-container">
         <BlButton text="注册" type="secondary" onclick={() => {}} />
-        <BlButton text="登录" disable={!account || !password} onclick={() => {}} />
+        <BlButton text="登录" disable={!account || !password} onclick={doLogin} />
       </div>
 
       <div className="notify" />
