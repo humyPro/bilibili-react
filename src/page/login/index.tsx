@@ -8,7 +8,9 @@ const Login = () => {
   const [password, setPassword] = useState('')
 
   const doLogin = () => {
-    login.getSaltKey().then(res => {})
+    login.getSaltKey().then(res => {
+      alert('密码登录暂不支持')
+    })
   }
 
   return (
