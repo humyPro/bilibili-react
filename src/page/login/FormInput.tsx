@@ -14,8 +14,9 @@ const FromInput = (props: FromInputProps) => {
 
   const [value, setValue] = useState(initValue ?? '')
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value ?? '')
-    onchange(value)
+    const inputValue = event.target.value ?? ''
+    setValue(inputValue)
+    onchange(inputValue)
   }
   return (
     <div className="login-from-input">
